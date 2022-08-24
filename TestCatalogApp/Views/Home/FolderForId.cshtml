@@ -1,0 +1,21 @@
+﻿@model IEnumerable<TestCatalogApp.Models.Folder>
+ <!DOCTYPE html> 
+<html>
+<head>
+    <title>App for folders catalog</title>
+</head>
+<body>
+    <form method="post">
+    <p>
+        <label>Модель</label><br />
+        <input type="text" name="id" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
+        @foreach (var folder in Model)
+<a asp-controller="Home" asp-action="FolderForId" asp-route-id="5" >@folder.ParentFolderId</a>
+}
+</body>
+</html>

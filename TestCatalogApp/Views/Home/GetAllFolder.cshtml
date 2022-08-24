@@ -1,0 +1,28 @@
+﻿@model IEnumerable<TestCatalogApp.Models.Folder>
+
+    <!DOCTYPE html>
+ 
+<html>
+<head>
+    <title>App for folders catalog</title>
+</head>
+<body>
+    <h3>Folders</h3>
+    <table>
+        <tr>
+            <td>id</td>
+            <td>Folder</td>
+            <td>Parrent id</td>
+            <td></td>
+        </tr>
+        @foreach (var folder in Model)
+            {
+            <tr>
+                <td>@folder.Id</td>
+                <td>@folder.NameFolder</td>
+                <td>@folder.ParentFolderId</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
